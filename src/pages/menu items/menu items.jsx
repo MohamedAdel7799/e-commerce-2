@@ -7,10 +7,8 @@ function MenuItems(){
 
     return(
 
-        <>
-        
-        
-        </>
+       <>
+       </>
     )
 }
 

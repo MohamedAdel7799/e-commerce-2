@@ -1,15 +1,18 @@
 import './App.css';
 import React from 'react';
-import Navbar from './components/navbar/navbar';
-import Footer from './components/footer/footer';
+import MainPage from './pages/mainpage/mainpage';
+
+
+
 
 function App() {
   
 
   return (
     <div className="App">
-      <Navbar/> 
-      <Footer/>     
+      <MainPage/>
+     
+          
      
      
     </div>

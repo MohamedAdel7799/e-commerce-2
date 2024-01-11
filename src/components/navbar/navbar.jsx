@@ -20,16 +20,16 @@ function Navbar(){
                   <a className="nav-link active" aria-current="page" href="#">All Category</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link active  " href="#">Today's Deals</a>
+                  <a className="nav-link active  " href="#todaysdeals">Today's Deals</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link active " href="#">Hot Offers</a>
+                  <a className="nav-link active " href="#hotoffers">Hot Offers</a>
                 </li>
                 <li className="nav-item">
                   <a className="nav-link active " href="#">Gift Cards</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link active " href="#">Menu Items</a>
+                  <a className="nav-link active " href="#menuitems">Menu Items</a>
                 </li>          
               </ul>       
             </div>
