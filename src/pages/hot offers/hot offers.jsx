@@ -15,19 +15,29 @@ function HotOffers(){
         <div>
             <div className="container w-75" >
                 <div className="d-flex justify-content-between ">
-                    <h1 className="fw-bolder"> Hot Offers</h1>
-                    <button className="btn btn-light" >View More</button>
+                    <h1 className="fw-bolder"> Hot Deals</h1>
+                    <button className="btn " >View More</button>
                 </div>
-                <div className=" h-auto bg-light mt-5 " >
-                <div className=" row  d-flex row-cols-lg-3 row-cols-sm-2 text-center  ">
-                    {
-                        data.map((e)=>{
+                <div className=" h-auto  mt-5 " >
+                <div className=" row gy-3 d-flex row-cols-lg-3 row-cols-sm-2 text-center  ">
+                {
+                        data.slice(10,18).map((e)=>{
                             return(  
-                                <div className="col" >
-                                   <div className="card" card-title={e.id} >
-                                    <h3>{e.id}</h3>
-                                     <h3>{e.title}</h3>
-                                     <h2>{e.category}</h2>
+                                <div className="col text-center  " >
+                                   <div className="card h-100 py-3  d-block  rounded-4  shadow  " card-title={e.id}  >
+                                       <div className="h-50">
+                                         <img src={e.image} className="   img-fluid  " style={{width:"100px"}} />
+                                       </div>
+
+                                       <div className=" d-block p-3 " >
+                                          <div className="d-flex justify-content-around mx-auto " >  
+                                            <h6>{e.category }</h6> 
+                                            <h6 className=" text-danger  ">{e.price} $</h6>             
+                                          </div>
+                                         
+                                          <p className="w-75 mx-auto   overflow-x-hidden pt-1  " >{e.title}</p>
+                                          <button className="btn btn-outline-info w-50 rounded-4   btn-flex-sm-wrap  " > show product </button>
+                                       </div>
                                    </div>
                                 </div> ) 
                             })}
