@@ -22,7 +22,7 @@ function TodaysDeals(){
                 <div className=" h-auto  mt-5 " >
                 <div className=" row gy-3 d-flex row-cols-lg-3 row-cols-sm-2 text-center  ">
                 {
-                        data.slice(0,9).map((e)=>{
+                        data.slice(0,3).map((e)=>{
                             return(  
                                 <div className="col text-center  " >
                                    <div className="card h-100 py-3  d-block  rounded-4  shadow  " card-title={e.id}  >
@@ -36,7 +36,7 @@ function TodaysDeals(){
                                             <h6 className=" text-danger  ">{e.price} $</h6>             
                                           </div>
                                          
-                                          <p className="w-75 mx-auto   pt-1  " >{e.title}</p>
+                                          <p className="w-75 mx-auto   overflow-hidden   mt-1  " >{e.title}</p>
                                           <button className="btn  w-50 rounded-4 btn-outline-info  btn-flex-sm-wrap  " > show product </button>
                                  
                                        </div>

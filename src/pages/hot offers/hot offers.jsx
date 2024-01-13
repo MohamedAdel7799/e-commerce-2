@@ -21,9 +21,9 @@ function HotOffers(){
                 <div className=" h-auto  mt-5 " >
                 <div className=" row gy-3 d-flex row-cols-lg-3 row-cols-sm-2 text-center  ">
                 {
-                        data.slice(10,18).map((e)=>{
+                        data.slice(0,8).map((e)=>{
                             return(  
-                                <div className="col text-center  " >
+                                <div className="col text-center col-sm-5  " >
                                    <div className="card h-100 py-3  d-block  rounded-4  shadow  " card-title={e.id}  >
                                        <div className="h-50">
                                          <img src={e.image} className="   img-fluid  " style={{width:"100px"}} />
