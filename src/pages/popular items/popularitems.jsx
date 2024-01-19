@@ -11,7 +11,9 @@ function PopularItems(){
     const[data,setData]=useState([])
     useEffect(()=>{
 
-        axios.get('https://fakestoreapi.com/products').then(res=>(setData(res.data))
+        axios.get('https://fakestoreapi.com/products').then(res=>(setData(res.data)),
+        
+        
     )},[])
 
     
@@ -42,7 +44,7 @@ function PopularItems(){
                                             <h6 className=" text-danger  ">{e.price} $</h6>             
                                           </div>
                                           
-                                            <p className="w-75 mx-auto  overflow-hidden pt-1  ">{e.title}</p>
+                                            <p className="w-75 mx-auto  overflow-hidden pt-1  "  style={{height:"50px"}}>{e.title}</p>
                                             <button className="btn btn-outline-info w-50 rounded-4 btn-sm  " > show product </button>
                                          
                                           

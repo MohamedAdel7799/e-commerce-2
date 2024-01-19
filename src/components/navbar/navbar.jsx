@@ -1,5 +1,6 @@
 import React from "react";
 import"./navbar.css"
+import { NavLink } from "react-router-dom";
 
 
 
@@ -22,7 +23,7 @@ function Navbar(){
           </div>
           
           <div className=" my-auto  " >
-             <ul className=" list-unstyled d-flex justify-content-around fw-bold    ">
+             <ul className=" list-unstyled d-flex justify-content-around fw-bold ">
                 <li className="mx-3">watch list</li>
                 <li className="mx-3"> cart</li>
                 <li className="mx-3">account</li>
@@ -41,24 +42,23 @@ function Navbar(){
             <div className="collapse navbar-collapse   fw-semibold  justify-content-center  " id="navbarSupportedContent">
               <ul className="navbar-nav  ">
                 <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="#">All Category</a>
+                  <NavLink className="nav-link active" aria-current="page"  >All Category</NavLink>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link active  " href="#todaysdeals">Today's Deals</a>
+                  <NavLink className="nav-link active  "  to="todays_deals">Today's Deals</NavLink>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link active " href="#hotoffers">Hot Offers</a>
+                  <NavLink className="nav-link active " >Hot Offers</NavLink>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link active " href="#">Gift Cards</a>
+                  <NavLink className="nav-link active "  to="popularitems" style={{scroll_behavior:"smooth"}}>Popular items</NavLink>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link active " href="#menuitems">Menu Items</a>
+                  <NavLink className="nav-link active " >Menu Items</NavLink>
                 </li>          
               </ul>       
             </div>
           </div>
-    
         </nav>
       
 

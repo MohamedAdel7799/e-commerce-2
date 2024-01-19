@@ -4,7 +4,7 @@ import"./today's deals.css"
 
 
 
-function TodaysDeals(){
+function TodaysDeals(props){
   
     const[data,setData]=useState([]);
 
@@ -16,7 +16,7 @@ function TodaysDeals(){
         <div>
             <div className="container w-75" >
                 <div className="d-flex justify-content-between ">
-                    <h1 className="fw-bolder"> Today's Deals</h1>
+                    <h1 className="fw-bolder"> Today's Deals  </h1>
                     <button className="btn" >View More</button>
                 </div>
                 <div className=" h-auto  mt-5 " >
@@ -36,7 +36,7 @@ function TodaysDeals(){
                                             <h6 className=" text-danger  ">{e.price} $</h6>             
                                           </div>
                                          
-                                          <p className="w-75 mx-auto   overflow-hidden   mt-1  " >{e.title}</p>
+                                          <p className="w-75 mx-auto   overflow-hidden   mt-1  "  style={{height:"50px"}} >{e.title}</p>
                                           <button className="btn  w-50 rounded-4 btn-outline-info  btn-flex-sm-wrap  " > show product </button>
                                  
                                        </div>

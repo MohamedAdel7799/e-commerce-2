@@ -7,6 +7,7 @@ import HotOffers from "../hot offers/hot offers";
 import Footer from "../../components/footer/footer";
 import Ads from "../advertisments/ads";
 import PopularItems from "../popular items/popularitems";
+import { Outlet } from "react-router-dom";
 
 
 
@@ -18,32 +19,25 @@ function MainPage(){
     return(
         <div>
             <div className="navbar-section">
-                <Navbar/>
-            
+                <Navbar/>        
             </div>
             <div className="first-page-section section " >
-                <AllCategory/>
-                
-                
+                <AllCategory/>             
             </div>
             <div className="today's-deals-section mt-5  section " >
-                <TodaysDeals/>
-                
+                <TodaysDeals  />             
             </div>
             <div className="hot-deals-section section mt-5 ">
-               <HotOffers/>  
-            
+               <HotOffers/>            
             </div>
-            <div className="ads-section section mt-5  ">
-              
+            <div className="ads-section section mt-5  ">           
                 <Ads/>
             </div>
             <div className="popular-items-section section ">
-                <PopularItems/>
+                  <PopularItems/>         
             </div>
             <div className="footer-section section ">
-                <Footer/>
-                
+                <Footer/>            
             </div>
         </div>
 
