@@ -17,7 +17,7 @@ function Ads(){
                   Limited Offer
                  </h6>
                  <h1>
-3                  30% off for perfume <br></br> product only this friday <br></br> and get special gift  
+                  30% off for perfume <br></br> product only this friday <br></br> and get special gift  
                  </h1>
                  <button className="btn btn-danger"> shop now</button>
                </div>

@@ -1,4 +1,6 @@
 import React from "react"
+import { FaGooglePlay ,FaAppStoreIos  } from "react-icons/fa";
+
 
 function Footer(){
      
@@ -40,9 +42,9 @@ function Footer(){
                 </div>
                <div class="g-col-lg-3 g-col-md-6 mb-4 mb-md-0     text-start  ">
                     <ul className=" list-unstyled  ">
-                        <li><a href={""} className="text-decoration-none text-dark fw-bold " >Download Our App</a></li>                
-                        <li><a href={""} className="text-decoration-none text-dark" >service</a></li>
-                        <li><a href={""} className="text-decoration-none text-dark" >service</a></li>             
+                        <li><a href={""} className="text-decoration-none  text-dark fw-bold " >Download Our App</a></li>                
+                        <li><a href={""} className="text-decoration-none text-dark" > {<FaGooglePlay/>}  Google play</a></li>
+                        <li><a href={""} className="text-decoration-none text-dark" >{<FaAppStoreIos />} App Store</a></li>             
                     </ul></div>
             </div>
             </div>

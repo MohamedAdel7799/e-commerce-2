@@ -22,7 +22,7 @@ function TodaysDeals(props){
                 <div className=" h-auto  mt-5 " >
                 <div className=" row gy-3 d-flex row-cols-lg-3 row-cols-sm-2 text-center  ">
                 {
-                        data.slice(0,3).map((e)=>{
+                        data.slice(0,6).map((e)=>{
                             return(  
                                 <div className="col text-center  " >
                                    <div className="card h-100 py-3  d-block  rounded-4  shadow  " card-title={e.id}  >

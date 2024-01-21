@@ -1,13 +1,11 @@
-import React from "react";
-import AllCategory from "../all category/allcategory";
-import Navbar from "../../components/navbar/navbar";
-import TodaysDeals from "../today's deals/today's deals";
-import GiftCards from "../gift cards/gift cards";
-import HotOffers from "../hot offers/hot offers";
-import Footer from "../../components/footer/footer";
-import Ads from "../advertisments/ads";
-import PopularItems from "../popular items/popularitems";
-import { Outlet } from "react-router-dom";
+import Footer from "../../components/footer/footer"
+import Navbar from "../../components/navbar/navbar"
+import Ads from "../advertisments/ads"
+import AllCategory from "../all category/allcategory"
+import HotOffers from "../hot offers/hot offers"
+import PopularItems from "../popular items/popularitems"
+import TodaysDeals from "../today's deals/today's deals"
+
 
 
 
@@ -17,30 +15,42 @@ function MainPage(){
 
 
     return(
-        <div>
-            <div className="navbar-section">
-                <Navbar/>        
+        <div className="vh-auto  ">
+            <div className="fixed-top  h-auto   w-100  "> <Navbar/> </div>
+            
+        
+            
+            <div className="vh-auto  pt-5  " id="#section1 " >
+                
+                <AllCategory/>
+                         
+             </div>
+             
+            <div className=" vh-auto mt-5   ">
+                <PopularItems/>
             </div>
-            <div className="first-page-section section " >
-                <AllCategory/>             
+            <div className="vh-auto mt-5  ">
+                      <TodaysDeals/>
             </div>
-            <div className="today's-deals-section mt-5  section " >
-                <TodaysDeals  />             
-            </div>
-            <div className="hot-deals-section section mt-5 ">
-               <HotOffers/>            
-            </div>
-            <div className="ads-section section mt-5  ">           
+            <div className=" vh-auto mt-5  ">
                 <Ads/>
+                
             </div>
-            <div className="popular-items-section section ">
-                  <PopularItems/>         
-            </div>
-            <div className="footer-section section ">
-                <Footer/>            
-            </div>
-        </div>
 
+            <div className="vh-auto mt-5   ">
+                <HotOffers/> 
+            </div>
+
+            <div className="vh-auto mt-5 ">
+                <Footer/>
+
+            </div>
+
+
+
+            
+            
+        </div>
         
         
         
