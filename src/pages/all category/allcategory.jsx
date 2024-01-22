@@ -1,5 +1,16 @@
 import React from "react";
 import"./allcatregory.css"
+import { FaTshirt ,FaTools  } from "react-icons/fa";
+import { GiLargeDress ,GiSonicShoes } from "react-icons/gi";
+import { IoWatch } from "react-icons/io5";
+import { IoMdLaptop } from "react-icons/io";
+import { MdOutlinePets } from "react-icons/md";
+import { MdOutdoorGrill } from "react-icons/md";
+import { FaIcons } from "react-icons/fa6";
+
+
+
+
 
 
 
@@ -11,15 +22,15 @@ function AllCategory(){
             
             <div className=" col gx-3 gy-2 ">
                 <ul className=" list-unstyled  ">
-                    <li className=" mt-2 ">  <a href={""} className=" text-decoration-none text-dark " > Men's Fashion</a>   </li>
-                    <li className=" mt-2 ">  <a href={""}  className=" text-decoration-none text-dark "> Women's Fashion</a>   </li>
-                    <li className=" mt-2 ">  <a href={""} className=" text-decoration-none text-dark "> Bages & Shoes</a>  </li>
-                    <li className=" mt-2 ">  <a href={""} className=" text-decoration-none text-dark "> Jewelry & Watches</a>  </li>
-                    <li className=" mt-2 ">  <a href={""} className=" text-decoration-none text-dark "> Computer , Office & Security </a>  </li>
-                    <li className=" mt-2 ">  <a href={""} className=" text-decoration-none text-dark "> Tools & Home Improvement </a> </li>
-                    <li className=" mt-2 ">  <a href={""} className=" text-decoration-none text-dark ">Home , Pet & Application </a> </li>
-                    <li className=" mt-2 ">  <a href={""} className=" text-decoration-none text-dark ">Outdoor Fun & Support </a> </li>
-                    <li className=" mt-2 ">  <a href={""} className=" text-decoration-none text-dark "> Consumer Electronics </a> </li>
+                    <li className=" mt-2 ">  <a href={""} className=" text-decoration-none text-dark    " >  {<FaTshirt/>} Men's Fashion</a>   </li>
+                    <li className=" mt-2 ">  <a href={""}  className=" text-decoration-none text-dark "> {<GiLargeDress/>}  Women's Fashion</a>   </li>
+                    <li className=" mt-2 ">  <a href={""} className=" text-decoration-none text-dark "> {<GiSonicShoes/>} Bages & Shoes</a>  </li>
+                    <li className=" mt-2 ">  <a href={""} className=" text-decoration-none text-dark "> {<IoWatch/>}  Jewelry & Watches</a>  </li>
+                    <li className=" mt-2 ">  <a href={""} className=" text-decoration-none text-dark ">{<IoMdLaptop/>}  Computer , Office & Security </a>  </li>
+                    <li className=" mt-2 ">  <a href={""} className=" text-decoration-none text-dark "> {<FaTools />}  Tools & Home Improvement </a> </li>
+                    <li className=" mt-2 ">  <a href={""} className=" text-decoration-none text-dark "> {<MdOutlinePets/>}  Home , Pet & Application </a> </li>
+                    <li className=" mt-2 ">  <a href={""} className=" text-decoration-none text-dark "> {<MdOutdoorGrill/>}  Outdoor Fun & Support </a> </li>
+                    <li className=" mt-2 ">  <a href={""} className=" text-decoration-none text-dark "> {<FaIcons/>}  Consumer Electronics </a> </li>
                 </ul>
             </div>
 
