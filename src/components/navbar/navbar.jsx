@@ -54,7 +54,7 @@ function Navbar(){
                   </li>
 
                   <li className="nav-item">
-                    <Link className="nav-link active fw-bold " >  {<FaCartArrowDown />}   cart </Link>
+                    <Link className="nav-link active fw-bold " to='cart' >  {<FaCartArrowDown />}   cart </Link>
                   </li>
 
                   <li className="nav-item">

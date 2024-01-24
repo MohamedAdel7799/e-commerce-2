@@ -26,9 +26,9 @@ function Login(){
  }
 
     return(
-        <div className=" container-fluid my-5  vh-100  ">
-            <div className=" form text-center  my-5  "  >
-                <div className=" d-block w-25 mx-auto shadow-lg my-5   w-sm-75 rounded-4  my-auto ">
+        <div className=" container-fluid   d-grid  vh-100  ">
+            <div className=" form text-center  my-auto  "  >
+                <div className=" d-block w-25 mx-auto shadow-lg    w-sm-75 rounded-4  my-auto ">
                     <div className=" text-center bg-success text-light py-4 rounded-top-4 "> <h4> Sign In </h4> </div>
                         <div className=" d-block  py-5 text-center ">
                             <div>

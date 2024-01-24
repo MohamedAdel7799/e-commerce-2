@@ -6,8 +6,8 @@ function Register() {
 
 
     return(
-        <div className="form text-center mt-5 py-5    mx-auto     ">
-        <div className="    d-block w-25 mx-auto shadow-lg my-auto  rounded-4    ">
+        <div className="form text-center   d-grid vh-100    mx-auto     ">
+        <div className=" d-block w-25 mx-auto shadow-lg my-auto  rounded-4    ">
             
             <div className=" text-center bg-success text-light py-4 rounded-top-4   "> <h4> Create Your Account </h4> </div>
              <div className=" d-block  py-5 text-center ">

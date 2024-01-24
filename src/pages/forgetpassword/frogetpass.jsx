@@ -10,7 +10,7 @@ function Forgetpass(){
 
 
 return(
-    <div className="form text-center mt-5 py-5   ">
+    <div className="form text-center vh-100 d-grid  py-5   ">
     <div className=" d-block w-25 mx-auto shadow-lg my-auto  w-sm-75     rounded-4  ">
         <div className=" text-center bg-success text-light py-4 rounded-top-4   "> <h4> Reset your password </h4> </div>
          <div className=" d-block  py-5 text-center ">

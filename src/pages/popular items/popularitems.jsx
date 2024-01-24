@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useRef, useState } from "react";
 import "./popularitems.css"
 import { CgChevronDoubleDown ,CgChevronDoubleUp  } from "react-icons/cg";
+import { json } from "react-router-dom";
 
 
 
@@ -30,11 +31,7 @@ function PopularItems(){
         Setviewmor(false)
      }
 
-     let store=()=>{
-        localStorage.setItem(data.id,data)
-
-
-     }
+    
     
     
 
@@ -67,7 +64,8 @@ function PopularItems(){
                                           </div>
                                           
                                             <p className="w-75 mx-auto  overflow-hidden pt-1  "  style={{height:"50px"}}>{e.title}</p>
-                                            <button className="btn btn-outline-info w-50 rounded-4 btn-sm  " onClick={store} > show product </button>
+                                            <button className="btn btn-outline-info w-50 rounded-4 btn-sm  " onClick={()=>{localStorage.setItem(e.id , e)
+                                            console.log(localStorage.getItem(e.id))}} > show product </button>
                                             <div></div>
 
                                                    
@@ -91,7 +89,9 @@ function PopularItems(){
                                       </div>
                                       
                                         <p className="w-75 mx-auto  overflow-hidden pt-1  "  style={{height:"50px"}}>{e.title}</p>
-                                        <button className="btn btn-outline-info w-50 rounded-4 btn-sm  " > show product </button>
+                                        <button className="btn btn-outline-info w-50 rounded-4 btn-sm "  onClick={()=>{localStorage.setItem(e.id , e)
+                                        console.log(localStorage.getItem(e.id))
+                                        }} > show product </button>
                                         <div></div>
 
                                                
