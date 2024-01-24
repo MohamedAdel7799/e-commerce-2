@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-import { useEffect } from "react"
 import { Link } from "react-router-dom"
 
 function Login(){
@@ -15,7 +14,6 @@ function Login(){
     let myuser = {...userdata}
     myuser[e.target.name] =e.target.value
     Setuserdata(myuser)
-    console.log(myuser)
  }
 
  let senddata =()=>{
