@@ -6,6 +6,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.css';
 import { BrowserRouter } from 'react-router-dom';
+import Productcontextprovider from './components/productcontext/productcontext';
 
 
 
@@ -13,7 +14,9 @@ import { BrowserRouter } from 'react-router-dom';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
-    <App />
+    <Productcontextprovider>
+        <App />
+    </Productcontextprovider>     
   </BrowserRouter>
 );
 

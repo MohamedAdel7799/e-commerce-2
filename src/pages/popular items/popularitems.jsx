@@ -1,8 +1,8 @@
 import axios from "axios";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect,  useState ,usecontext } from "react";
 import "./popularitems.css"
 import { CgChevronDoubleDown ,CgChevronDoubleUp  } from "react-icons/cg";
-import { json } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 
@@ -10,7 +10,7 @@ import { json } from "react-router-dom";
 
 function PopularItems(){
      
-
+    const {productdata}= usecontext() 
     const[data,setData]=useState([])
     useEffect(()=>{
 
@@ -51,8 +51,8 @@ function PopularItems(){
                     { viewmor? (
                          data.map((e)=>{
                             return(  
-                                <div className="col col-sm-5 text-center  " >
-                                   <div className="card h-100 py-3 d-block   rounded-4  shadow  " card-title={e.id}  >
+                                <div className="col col-sm-5 text-center  " key={e.id}>
+                                   <div className="card h-100 py-3 d-block   rounded-4  shadow  "   >
                                        <div className="h-50 my-auto ">
                                          <img src={e.image} className="img-fluid  " style={{width:"100px"}} />
                                        </div>
@@ -65,10 +65,10 @@ function PopularItems(){
                                           
                                             <p className="w-75 mx-auto  overflow-hidden pt-1  "  style={{height:"50px"}}>{e.title}</p>
                                             <button className="btn btn-outline-info w-50 rounded-4 btn-sm  " onClick={()=>{localStorage.setItem(e.id , e)
-                                            console.log(localStorage.getItem(e.id))}} > show product </button>
+                                            console.log(localStorage.getItem(e.id))}} > <Link to={`/${e.id}`} >show product</Link> </button>
                                             <div></div>
 
-                                                   
+                                    
                                        </div>
                                    </div>
                                 </div> ) 
@@ -76,8 +76,8 @@ function PopularItems(){
 
                     ):( data.slice(0,6).map((e)=>{
                         return(  
-                            <div className="col col-sm-5 text-center  " >
-                               <div className="card h-100 py-3 d-block   rounded-4  shadow  " card-title={e.id}  >
+                            <div className="col col-sm-5 text-center" key={e.id} >
+                               <div className="card h-100 py-3 d-block   rounded-4  shadow  "   >
                                    <div className="h-50 my-auto ">
                                      <img src={e.image} className="img-fluid  " style={{width:"100px"}} />
                                    </div>

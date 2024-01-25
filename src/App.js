@@ -7,6 +7,7 @@ import Login from './pages/signin/signin';
 import Register from './pages/register/register';
 import Forgetpass from './pages/forgetpassword/frogetpass';
 import Cart from './pages/cartitems/cartitems';
+import Showproduct from './pages/showproduct/showproduct';
 
 
 
@@ -22,7 +23,7 @@ function App() {
         <Route path='/login' element={<Login/>} ></Route>
         <Route path='/register'element={<Register/> } ></Route>
         <Route path='/forgetpass' element={<Forgetpass/>} ></Route>
-        <Route path='/cart' element={<Cart/>}></Route>
+        <Route path='/:id' element={<Showproduct/>} ></Route>
       </Routes>
    
      
