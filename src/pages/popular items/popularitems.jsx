@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useEffect,  useState ,usecontext } from "react";
+import React, { useEffect,  useState  } from "react";
 import "./popularitems.css"
 import { CgChevronDoubleDown ,CgChevronDoubleUp  } from "react-icons/cg";
 import { Link } from "react-router-dom";
@@ -10,7 +10,6 @@ import { Link } from "react-router-dom";
 
 function PopularItems(){
      
-    const {productdata}= usecontext() 
     const[data,setData]=useState([])
     useEffect(()=>{
 
@@ -54,7 +53,7 @@ function PopularItems(){
                                 <div className="col col-sm-5 text-center  " key={e.id}>
                                    <div className="card h-100 py-3 d-block   rounded-4  shadow  "   >
                                        <div className="h-50 my-auto ">
-                                         <img src={e.image} className="img-fluid  " style={{width:"100px"}} />
+                                         <img alt="hi" src={e.image}  className="img-fluid  " style={{width:"100px"}} />
                                        </div>
 
                                        <div className=" d-block p-3   " >
@@ -79,7 +78,7 @@ function PopularItems(){
                             <div className="col col-sm-5 text-center" key={e.id} >
                                <div className="card h-100 py-3 d-block   rounded-4  shadow  "   >
                                    <div className="h-50 my-auto ">
-                                     <img src={e.image} className="img-fluid  " style={{width:"100px"}} />
+                                     <img src={e.image} alt="hi" className="img-fluid  " style={{width:"100px"}} />
                                    </div>
 
                                    <div className=" d-block p-3   " >

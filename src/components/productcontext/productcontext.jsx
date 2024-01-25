@@ -1,22 +1,23 @@
 import axios from "axios";
-import {  createContext, useEffect, useState } from "react";
+import { Children } from "react";
+import {  createContext, useEffect, useState   } from "react";
 
 
-export const productcontext =createContext()
+export const productcontext = createContext()
 
-function Productcontextprovider({Children}){
+function Productcontextprovider( ){
   
     const [productdata ,Setproductdata]=useState()
     useEffect(()=>{
-        axios.get('https://fakestoreapi.com/products').then(res=>(Setproductdata(res.data)))
+        axios.get('').then(res=>(Setproductdata(res.data)))
     })
 
     return(
-        <>
-        <productcontext.Provider value={{productdata}}>    
-            {Children}
+        
+        <productcontext.Provider value={{productdata}}>  
+          
         </productcontext.Provider>
-        </>
+        
     )
 }
 

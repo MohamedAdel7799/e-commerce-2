@@ -14,9 +14,8 @@ import Productcontextprovider from './components/productcontext/productcontext';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
-    <Productcontextprovider>
-        <App />
-    </Productcontextprovider>     
+    <App />
+        
   </BrowserRouter>
 );
 
