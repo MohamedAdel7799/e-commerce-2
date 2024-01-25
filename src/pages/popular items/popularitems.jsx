@@ -1,22 +1,19 @@
 import axios from "axios";
-import React, { useEffect,  useState  } from "react";
+import React, { useContext, useEffect,  useState  } from "react";
 import "./popularitems.css"
-import { CgChevronDoubleDown ,CgChevronDoubleUp  } from "react-icons/cg";
+import { CgChevronDoubleDown,CgChevronDoubleUp  } from "react-icons/cg";
 import { Link } from "react-router-dom";
+import { Productcontext } from "../../App";
 
 
 
 
 
 function PopularItems(){
-     
-    const[data,setData]=useState([])
-    useEffect(()=>{
 
-        axios.get('https://fakestoreapi.com/products').then(res=>(setData(res.data)),
-        
-        
-    )},[])
+  const {productdata}= useContext(Productcontext)
+     
+
 
     const[viewmor,Setviewmor]=useState(false)
      
@@ -48,7 +45,7 @@ function PopularItems(){
                 <div className=" h-auto  mt-5   " >
                 <div className=" row gy-3   d-flex row-cols-lg-3 row-cols-sm-2 row-cols-xs-2 text-center  ">
                     { viewmor? (
-                         data.map((e)=>{
+                         productdata.map((e)=>{
                             return(  
                                 <div className="col col-sm-5 text-center  " key={e.id}>
                                    <div className="card h-100 py-3 d-block   rounded-4  shadow  "   >
@@ -64,7 +61,7 @@ function PopularItems(){
                                           
                                             <p className="w-75 mx-auto  overflow-hidden pt-1  "  style={{height:"50px"}}>{e.title}</p>
                                             <button className="btn btn-outline-info w-50 rounded-4 btn-sm  " onClick={()=>{localStorage.setItem(e.id , e)
-                                            console.log(localStorage.getItem(e.id))}} > <Link to={`/${e.id}`} >show product</Link> </button>
+                                            console.log(localStorage.getItem(e.id))}} > <Link className=" text-decoration-none  " to={`/${e.id}`} >show product</Link> </button>
                                             <div></div>
 
                                     
@@ -73,7 +70,7 @@ function PopularItems(){
                                 </div> ) 
                             })
 
-                    ):( data.slice(0,6).map((e)=>{
+                    ):( productdata.slice(0,6).map((e)=>{
                         return(  
                             <div className="col col-sm-5 text-center" key={e.id} >
                                <div className="card h-100 py-3 d-block   rounded-4  shadow  "   >
@@ -90,7 +87,7 @@ function PopularItems(){
                                         <p className="w-75 mx-auto  overflow-hidden pt-1  "  style={{height:"50px"}}>{e.title}</p>
                                         <button className="btn btn-outline-info w-50 rounded-4 btn-sm "  onClick={()=>{localStorage.setItem(e.id , e)
                                         console.log(localStorage.getItem(e.id))
-                                        }} > show product </button>
+                                        }} > <Link to={`/${e.id}`} className=" text-decoration-none  "> Show product </Link> </button>
                                         <div></div>
 
                                                

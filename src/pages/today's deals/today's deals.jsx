@@ -1,19 +1,15 @@
 import axios from "axios"
-import React, { useEffect, useState } from "react"
+import React, { useContext, useEffect, useState } from "react"
 import"./today's deals.css"
 import { CgChevronDoubleDown ,CgChevronDoubleUp  } from "react-icons/cg";
+import { Link } from "react-router-dom";
+import { Productcontext } from "../../App";
 
 
 
 function TodaysDeals(props){
   
-    const[data,setData]=useState([]);
-
-    useEffect(()=>{
-        axios.get('https://fakestoreapi.com/products').then(res=>setData(res.data)
-        
-        )},[])
-
+       const {productdata}=useContext(Productcontext)
         const[viewmor,Setviewmor]=useState(false)
      
      
@@ -41,10 +37,10 @@ function TodaysDeals(props){
                 <div className=" h-auto  mt-5   " >
                 <div className=" row gy-3   d-flex row-cols-lg-3 row-cols-sm-2 row-cols-xs-2 text-center  ">
                     { viewmor? (
-                         data.map((e)=>{
+                         productdata.map((e)=>{
                             return(  
                                 <div className="col col-sm-5 text-center  " >
-                                   <div className="card h-100 py-3 d-block   rounded-4  shadow  " card-title={e.id}  >
+                                   <div className="card h-100 py-3 d-block   rounded-4  shadow  " key={e.id}  >
                                        <div className="h-50 my-auto ">
                                          <img src={e.image} className="img-fluid  " style={{width:"100px"}} />
                                        </div>
@@ -56,7 +52,7 @@ function TodaysDeals(props){
                                           </div>
                                           
                                             <p className="w-75 mx-auto  overflow-hidden pt-1  "  style={{height:"50px"}}>{e.title}</p>
-                                            <button className="btn btn-outline-info w-50 rounded-4 btn-sm  " onClick={()=>{localStorage.setItem(e.id , e.title)}} > show product </button>
+                                            <button className="btn btn-outline-info w-50 rounded-4 btn-sm  " onClick={()=>{localStorage.setItem(e.id , e.title)}} > <Link to={`/${e.id}`} className=" text-decoration-none  "> Show product </Link> </button>
                                             <div></div>
 
                                                    
@@ -65,10 +61,10 @@ function TodaysDeals(props){
                                 </div> ) 
                             })
 
-                    ):( data.slice(0,6).map((e)=>{
+                    ):( productdata.slice(0,6).map((e)=>{
                         return(  
                             <div className="col col-sm-5 text-center  " >
-                               <div className="card h-100 py-3 d-block   rounded-4  shadow  " card-title={e.id}  >
+                               <div className="card h-100 py-3 d-block   rounded-4  shadow  " key={e.id}  >
                                    <div className="h-50 my-auto ">
                                      <img src={e.image} className="img-fluid  " style={{width:"100px"}} />
                                    </div>
@@ -80,7 +76,7 @@ function TodaysDeals(props){
                                       </div>
                                       
                                         <p className="w-75 mx-auto  overflow-hidden pt-1  "  style={{height:"50px"}}>{e.title}</p>
-                                        <button className="btn btn-outline-info w-50 rounded-4 btn-sm "  onClick={()=>{localStorage.setItem(e.id , e.title)}} > show product </button>
+                                        <button className="btn btn-outline-info w-50 rounded-4 btn-sm "  onClick={()=>{localStorage.setItem(e.id , e.title)}} > <Link to={`/${e.id}`} className=" text-decoration-none  "> Show product </Link> </button>
                                         <div></div>
 
                                                
