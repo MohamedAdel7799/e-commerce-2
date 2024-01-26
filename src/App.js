@@ -7,6 +7,7 @@ import Register from './pages/register/register';
 import Forgetpass from './pages/forgetpassword/frogetpass';
 import Showproduct from './pages/showproduct/showproduct';
 import axios from 'axios';
+import Cart from './pages/shoppingcart/shopingcart';
 
 
 export const Productcontext = createContext()
@@ -31,6 +32,7 @@ function App() {
             <Route path='/register'element={<Register/> } ></Route>
             <Route path='/forgetpass' element={<Forgetpass/>} ></Route>
             <Route path='/:id' element={<Showproduct/>} ></Route>
+            <Route path='/cart' element={<Cart/>}></Route>
           </Routes>
 
       </Productcontext.Provider>

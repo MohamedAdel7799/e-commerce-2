@@ -7,7 +7,7 @@ import { Productcontext } from "../../App";
 
 
 
-function TodaysDeals(props){
+function TodaysDeals(){
   
        const {productdata}=useContext(Productcontext)
         const[viewmor,Setviewmor]=useState(false)
