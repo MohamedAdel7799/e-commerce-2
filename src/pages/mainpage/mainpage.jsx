@@ -34,11 +34,7 @@ function MainPage(){
                 todaysdeals ={todaysdeals}
                 ads ={ads}
                 hotoffers={hotoffers}
-                footer={footer}
-            
-            
-            
-            
+                footer={footer}          
             /></div>            
             <div className="vh-auto  pt-5  " ref={allcategory}   >           
                 <AllCategory/>                        
