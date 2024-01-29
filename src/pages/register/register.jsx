@@ -10,19 +10,24 @@ function Register() {
         email:""
 
     })
+
+
+   
     
  let collectdata= (e)=>{
     let myuser = {...userdata}
     myuser[e.target.name] =e.target.value
     Setuserdata(myuser)
- }
-
- let senddata =()=>{
-    console.log(userdata)
-    localStorage.setItem(userdata.name,userdata.password)
-
 
  }
+
+ const senddata=()=>{
+
+   localStorage.setItem("register" ,userdata)
+ }
+
+
+
 
     return(
         <div className="form text-center   d-grid vh-100    mx-auto     ">

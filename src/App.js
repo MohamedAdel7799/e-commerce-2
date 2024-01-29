@@ -15,35 +15,38 @@ export const Productcontext = createContext()
 
 function App() {
 
-
-
   const [productdata , Setproductdata]=useState([])
   useEffect(()=>{
       axios.get('https://fakestoreapi.com/products').then(res=>(Setproductdata(res.data)))
-     
   })
+
+
+  
 
   return (
     <div className="App">
       <Productcontext.Provider value={{productdata}}>
-        <Routes>
-            <Route path='/' element={<MainPage/>}></Route>
-            <Route path='/login' element={<Login/>} ></Route>
-            <Route path='/register'element={<Register/> } ></Route>
-            <Route path='/forgetpass' element={<Forgetpass/>} ></Route>
-            <Route path='/:id' element={<Showproduct/>} ></Route>
-            <Route path='/cart' element={<Cart/>}></Route>
-          </Routes>
-
-      </Productcontext.Provider>
-
       
+          <Routes>
+          
+          <Route path='/' element={<MainPage/>}></Route>
+          <Route path='/login' element={<Login/>} ></Route>
+          <Route path='/register'element={<Register/> } ></Route>
+          <Route path='/forgetpass' element={<Forgetpass/>} ></Route>
+          <Route path='/:id' element={<Showproduct/>} ></Route>
+          <Route path='/cart' element={<Cart/>}></Route>
+        </Routes>
+   
+
+        
+      
+         
         
        
-      
-   
-     
-     
+
+        
+        
+      </Productcontext.Provider>
      
     </div>
   );

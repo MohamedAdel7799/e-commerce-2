@@ -61,7 +61,7 @@ function PopularItems(){
                                           
                                             <p className="w-75 mx-auto  overflow-hidden pt-1  "  style={{height:"50px"}}>{e.title}</p>
                                             <button className="btn btn-outline-info w-50 rounded-4 btn-sm  " 
-                                             > <Link className=" text-decoration-none  " to={`/${e.id}`} >show product</Link> </button>
+                                             > <Link className=" text-decoration-none  " to={`/${e.id}`} >show Details</Link> </button>
                                             <div></div>
 
                                     
@@ -70,7 +70,7 @@ function PopularItems(){
                                 </div> ) 
                             })
 
-                    ):( productdata.slice(0,6).map((e)=>{
+                    ):( productdata.slice(0,3).map((e)=>{
                         return(  
                             <div className="col col-sm-5 text-center" key={e.id} >
                                <div className="card h-100 py-3 d-block   rounded-4  shadow  "   >
@@ -85,7 +85,7 @@ function PopularItems(){
                                       </div>
                                       
                                         <p className="w-75 mx-auto  overflow-hidden pt-1  "  style={{height:"50px"}}>{e.title}</p>
-                                        <button className="btn btn-outline-info w-50 rounded-4 btn-sm "   > <Link to={`/${e.id}`} className=" text-decoration-none  "> Show product </Link> </button>
+                                        <button className="btn btn-outline-info w-50 rounded-4 btn-sm "   > <Link to={`/${e.id}`} className=" text-decoration-none  "> Show Details </Link> </button>
                                         <div></div>
 
                                                

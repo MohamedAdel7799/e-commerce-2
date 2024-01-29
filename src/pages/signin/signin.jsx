@@ -14,14 +14,14 @@ function Login(){
     let myuser = {...userdata}
     myuser[e.target.name] =e.target.value
     Setuserdata(myuser)
- }
-
- let senddata =()=>{
-    console.log(userdata)
-    localStorage.setItem(userdata.name,userdata.password)
-
 
  }
+
+ const senddata=()=>{
+
+    localStorage.setItem("signin" , JSON.stringify(userdata) )
+  }
+ 
 
     return(
         <div className=" container-fluid   d-grid  vh-100  ">

@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import"./navbar.css"
 import { Link } from "react-router-dom";
 import { FaCartArrowDown ,FaRegUser ,FaMobileAlt  } from "react-icons/fa";
@@ -7,6 +7,7 @@ import { FaCartArrowDown ,FaRegUser ,FaMobileAlt  } from "react-icons/fa";
 
 
 function Navbar(props){
+
 
    const scroll=(e)=>{
     window.scrollTo({
@@ -59,28 +60,21 @@ function Navbar(props){
                     <Link className="nav-link active fw-bold" onClick={()=>{
                       scroll(props.footer)
                     }}  >Help</Link>
-                  </li>
-                 
-                       
+                  </li>                                  
               </ul>
                            
             </div>
             <div className="collapse navbar-collapse   fw-semibold  justify-content-end  " id="navbarSupportedContent">
               <ul className="navbar-nav  ">
-                  <li className="nav-item">
-                    <Link className="nav-link active fw-bold "  aria-current="page"  > {<FaMobileAlt />}  watch list </Link>
-                  </li>
+               
 
                   <li className="nav-item">
-                    <Link className="nav-link active fw-bold " to='cart' >  {<FaCartArrowDown />}   cart </Link>
+                    <Link className="nav-link active fw-bold " to='cart' >  {<FaCartArrowDown /> } cart </Link>
                   </li>
 
                   <li className="nav-item">
                     <Link className="nav-link active fw-bold" to='login' >  {<FaRegUser />}   login </Link>
                   </li>
-
-                 
-                 
                        
               </ul>
                            

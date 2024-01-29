@@ -1,15 +1,23 @@
-import React, { useContext } from "react";
-import { useParams } from "react-router-dom";
+import React, { useContext, useEffect, useState } from "react";
+import { json, useNavigate, useParams } from "react-router-dom";
 import { Productcontext } from "../../App";
 
 
 function Showproduct(){
     const {productdata}= useContext(Productcontext)
     const {id}=useParams()
+
+    const navigate=useNavigate()
+  
+   
+
+  
+
     
      
     return(
-        <div className=" ">      
+        <div >  
+          
           {productdata.map((e)=>{
            
             if(e.id == id ){
@@ -26,14 +34,25 @@ function Showproduct(){
                           <div className="text-center mt-3 fw-bold   ">
                             <h3>{e.category}</h3>
                           </div>
+                          
                           <div className="mt-3 ">
                              <h4>{e.title}</h4>
                           </div>
                           <div className="text-center text-danger mt-3 ">
                              <h4>{e.price} $</h4>
                           </div>
+                          <div className="text-center  mt-3 ">
+                             <h4> rating {e.rating.rate} </h4>
+                          </div>
                           <div className="text-center mt-5  ">
-                            <button className="btn btn-primary" onClick={()=>{  localStorage.setItem(e.id,e)}} > add to cart  </button>
+                            <button className="btn btn-primary" > add to cart  </button>
+
+
+                              <button className="btn btn-primary" onClick={()=>{
+                                navigate('/')
+                              
+
+                            }} > remove  </button>
                           </div>
                         </div>                          
                        </div>           

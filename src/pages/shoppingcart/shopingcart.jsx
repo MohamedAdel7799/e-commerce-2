@@ -1,20 +1,15 @@
-import React, { useContext } from "react"
-import { Productcontext } from "../../App"
+import React from "react"
 
 
 function Cart(){
 
-    const {productdata}=useContext(Productcontext)
-    
+   
   
-
     return(
-        <div>
-            {
-                 
-            }
-
-
+         <div> 
+            <h1></h1>
+               
+                  
         </div>
     )
 }

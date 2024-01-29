@@ -14,7 +14,7 @@ function TodaysDeals(){
      
      
         let showmore =()=>{
-          Setviewmor(true)     
+          Setviewmor(true)  
         }
    
         let showless=()=>{
@@ -76,7 +76,7 @@ function TodaysDeals(){
                                       </div>
                                       
                                         <p className="w-75 mx-auto  overflow-hidden pt-1  "  style={{height:"50px"}}>{e.title}</p>
-                                        <button className="btn btn-outline-info w-50 rounded-4 btn-sm "  onClick={()=>{localStorage.setItem(e.id , e.title)}} > <Link to={`/${e.id}`} className=" text-decoration-none  "> Show product </Link> </button>
+                                        <button className="btn btn-outline-info w-50 rounded-4 btn-sm "   > <Link to={`/${e.id}`} className=" text-decoration-none  "> Show product </Link> </button>
                                         <div></div>
 
                                                
