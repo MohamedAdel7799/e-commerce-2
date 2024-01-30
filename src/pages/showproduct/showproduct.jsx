@@ -10,7 +10,7 @@ function Showproduct(){
     const navigate=useNavigate()
   
    
-
+  
   
 
     
@@ -21,7 +21,9 @@ function Showproduct(){
           {productdata.map((e)=>{
            
             if(e.id == id ){
+              
                return(
+               
                 <div className="vh-100 d-grid">
                     <div className=" row row-cols-auto m-auto h-auto shadow-lg ">
                        <div className="col d-grid w-auto h-auto p-5   ">
@@ -45,14 +47,8 @@ function Showproduct(){
                              <h4> rating {e.rating.rate} </h4>
                           </div>
                           <div className="text-center mt-5  ">
-                            <button className="btn btn-primary" > add to cart  </button>
-
-
-                              <button className="btn btn-primary" onClick={()=>{
-                                navigate('/')
-                              
-
-                            }} > remove  </button>
+                            <button className="btn btn-primary"  > add to cart  </button>
+                             <button className="btn btn-primary" onClick={()=>{ navigate('/') }} > remove  </button>
                           </div>
                         </div>                          
                        </div>           
@@ -60,6 +56,8 @@ function Showproduct(){
                     
             
                 </div>
+
+
                 )}})}
 
   

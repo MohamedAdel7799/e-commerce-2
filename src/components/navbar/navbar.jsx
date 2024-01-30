@@ -11,7 +11,6 @@ function Navbar(props){
 
    const scroll=(e)=>{
     window.scrollTo({
-
       top:e.current.offsetTop,
       behavior:"smooth"
     });
