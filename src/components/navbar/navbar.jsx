@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import"./navbar.css"
 import { Link } from "react-router-dom";
 import { FaCartArrowDown ,FaRegUser ,FaMobileAlt  } from "react-icons/fa";
 
-
+import Swal from "sweetalert2";
 
 
 function Navbar(props){
@@ -16,6 +16,15 @@ function Navbar(props){
     });
    };
 
+   const [user,Setuser]=useState(null)
+   useEffect(()=>{
+
+   Setuser(localStorage.getItem('signin')) 
+   })
+
+   const logout =()=>{
+    localStorage.removeItem('signin')
+   }
 
     return(
        
@@ -72,7 +81,38 @@ function Navbar(props){
                   </li>
 
                   <li className="nav-item">
-                    <Link className="nav-link active fw-bold" to='login' >  {<FaRegUser />}   login </Link>
+                    {
+                      user?(<Link className="nav-link active fw-bold"  onClick={()=>{
+                        const swalWithBootstrapButtons = Swal.mixin({
+                          customClass: {
+                            confirmButton: "btn btn-success",
+                            cancelButton: "btn btn-danger"
+                          },
+                          buttonsStyling: false
+                        });
+                        swalWithBootstrapButtons.fire({
+                          title: "Are you sure?",
+                          text: "You won't logout!",
+                          icon: "warning",
+                          showCancelButton: true,
+                          confirmButtonText: "Yes, logout !",
+                          cancelButtonText: "No, cancel!",
+                          reverseButtons: true
+                        }).then((result) => {
+                          if (result.isConfirmed) {
+                            swalWithBootstrapButtons.fire({
+                              title: "Deleted!",
+                              text: "Your succssfuly loged out",
+                              icon: "success",
+                              
+                            })
+                          logout() ;
+                          } 
+                        });
+                      }}  >  {<FaRegUser />}   logout </Link>
+                      ):( <Link className="nav-link active fw-bold"  to='login' >  {<FaRegUser />}   signin </Link>
+                      )
+                    }
                   </li>
                        
               </ul>

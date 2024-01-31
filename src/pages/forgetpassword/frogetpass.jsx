@@ -44,7 +44,7 @@ function Forgetpass(){
      });
      Toast.fire({
        icon: "success",
-       title: "Signed in successfully"
+       title: "Your Password has been changed"
      });
  }
 

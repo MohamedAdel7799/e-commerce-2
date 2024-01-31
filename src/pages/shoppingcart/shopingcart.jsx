@@ -1,13 +1,30 @@
-import React from "react"
+import React, { useContext, useEffect, useState } from "react"
+import { Productcontext } from "../../App"
 
 
 function Cart(){
+
+    const {productdata}=useContext(Productcontext)
+
+    const [cartitems,Setcartitems]=useState([])
+
+    useEffect(()=>{
+       Setcartitems(JSON.parse(localStorage.getItem('incart'))) 
+    }) 
+
+
+   
+
+    
+
+ 
 
    
   
     return(
          <div> 
-            <h1></h1>
+            
+           
                
                   
         </div>

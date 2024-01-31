@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { CgChevronDoubleDown ,CgChevronDoubleUp  } from "react-icons/cg";
 import { Productcontext } from "../../App";
 import { Link, json } from "react-router-dom";
+import ReactStars from "react-rating-stars-component";
 
 
 
@@ -42,16 +43,32 @@ function HotOffers(){
                                        <div className="h-50 my-auto ">
                                          <img src={e.image} className="img-fluid  " style={{width:"100px"}} />
                                        </div>
-
                                        <div className=" d-block p-3   " >
                                           <div className="d-flex justify-content-around mx-auto " >  
                                             <h6>{e.category }</h6> 
                                             <h6 className=" text-danger  ">{e.price} $</h6>             
                                           </div>
-                                          
                                             <p className="w-75 mx-auto  overflow-hidden pt-1  "  style={{height:"50px"}}>{e.title}</p>
-                                            <button className="btn btn-outline-info w-50 rounded-4 btn-sm  " onClick={()=>{localStorage.setItem(e.id , e)}}  > <Link to={`/${e.id}`}>Show Product</Link> </button>
-                                            <div></div>
+                                            <div className=" text-center   mt-3 ">
+                                                      <h4> {e.rating.rate <4?(<div className=" d-flex  justify-content-center text-center "> <ReactStars
+                                                            count={5}                               
+                                                            size={24}
+                                                            Color="#ffd700"
+                                                            edit={false}
+                                                          value={3} /> </div>)
+                                                          :
+                                                          (<div className=" d-flex  justify-content-center text-center "> <ReactStars
+                                                          count={5}                               
+                                                          size={24}
+                                                          Color="#ffd700"
+                                                          edit={false}
+                                                          value={4} /> </div>)} 
+                                                          </h4>
+                                             </div>
+                                            <button className="btn btn-info w-50 rounded-4 btn-sm  " onClick={()=>{localStorage.setItem(e.id , e)}}  > <Link to={`/${e.id}`} className=" text-decoration-none fw-bold text-light  ">Show Product</Link> </button>
+                                            <div>
+                                              
+                                            </div>
 
                                                    
                                        </div>
@@ -74,7 +91,23 @@ function HotOffers(){
                                       </div>
                                       
                                         <p className="w-75 mx-auto  overflow-hidden pt-1  "  style={{height:"50px"}}>{e.title}</p>
-                                        <button className="btn btn-outline-info w-50 rounded-4 btn-sm "  onClick={()=>{localStorage.setItem(e.id , e)}} > <Link to={`/${e.id}`}>Show Product</Link> </button>
+                                        <div className=" text-center   mt-3 ">
+                             <h4> {e.rating.rate <4?(<div className=" d-flex  justify-content-center text-center "> <ReactStars
+                                  count={5}                               
+                                  size={24}
+                                  Color="#ffd700"
+                                  edit={false}
+                                 value={3} /> </div>)
+                                 :
+                                 (<div className=" d-flex  justify-content-center text-center "> <ReactStars
+                                 count={5}                               
+                                 size={24}
+                                 Color="#ffd700"
+                                 edit={false}
+                                value={4} /> </div>)} 
+                                </h4>
+                          </div>
+                                        <button className="btn btn-info w-50 rounded-4 btn-sm "  onClick={()=>{localStorage.setItem(e.id , e)}} > <Link to={`/${e.id}`} className=" text-decoration-none fw-bold text-light  ">Show Product</Link> </button>
                                         <div></div>
 
                                                

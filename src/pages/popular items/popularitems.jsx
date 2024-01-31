@@ -4,6 +4,7 @@ import "./popularitems.css"
 import { CgChevronDoubleDown,CgChevronDoubleUp  } from "react-icons/cg";
 import { Link } from "react-router-dom";
 import { Productcontext } from "../../App";
+import ReactStars from "react-rating-stars-component";
 
 
 
@@ -60,8 +61,16 @@ function PopularItems(){
                                           </div>
                                           
                                             <p className="w-75 mx-auto  overflow-hidden pt-1  "  style={{height:"50px"}}>{e.title}</p>
-                                            <button className="btn btn-outline-info w-50 rounded-4 btn-sm  " 
-                                             > <Link className=" text-decoration-none  " to={`/${e.id}`} >show Details</Link> </button>
+
+                                            <div className=" text-center   mt-3 ">
+                                              {e.rating.rate <4?(<div className=" d-flex  justify-content-around text-center align-content-center  "> <div><ReactStars
+                                                    count={5}   size={24}     Color="#ffd700"  edit={false}     value={3} /></div> <div>in stock {e.rating.count}</div>  </div>):
+                                                  (<div className=" d-flex  justify-content-around  text-center align-content-center  "> <div><ReactStars
+                                                  count={5}   size={24}     Color="#ffd700"  edit={false}     value={4} /></div> <div>in stock {e.rating.count}</div>  </div>)} 
+                                               
+                                            </div>
+                                            <button className="btn btn-info w-50 rounded-4 btn-sm  " 
+                                             > <Link className=" text-decoration-none fw-bold  text-light  " to={`/${e.id}`} >show Details</Link> </button>
                                             <div></div>
 
                                     
@@ -85,7 +94,14 @@ function PopularItems(){
                                       </div>
                                       
                                         <p className="w-75 mx-auto  overflow-hidden pt-1  "  style={{height:"50px"}}>{e.title}</p>
-                                        <button className="btn btn-outline-info w-50 rounded-4 btn-sm "   > <Link to={`/${e.id}`} className=" text-decoration-none  "> Show Details </Link> </button>
+                                        <div className=" text-center   mt-3 ">
+                                              {e.rating.rate <4?(<div className=" d-flex  justify-content-around text-center align-content-center  "> <div className=" p-0 m-0  "><ReactStars
+                                                    count={5}   size={24}     Color="#ffd700"  edit={false}     value={3} /></div> <div className=" p-0 m-0  ">in stock {e.rating.count}</div>  </div>):
+                                                  (<div className=" d-flex  justify-content-around text-center "> <div><ReactStars
+                                                  count={5}   size={24}     Color="#ffd700"  edit={false}     value={4} /></div> <div className=" p-0 m-0  ">in stock {e.rating.count}</div>  </div>)} 
+                                               
+                                            </div>
+                                        <button className="btn btn-info w-50 rounded-4 btn-sm "   > <Link to={`/${e.id}`} className=" text-decoration-none fw-bold text-light  "> Show Details </Link> </button>
                                         <div></div>
 
                                                

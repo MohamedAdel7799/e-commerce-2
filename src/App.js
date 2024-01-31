@@ -21,7 +21,7 @@ function App() {
   })
 
 
-  
+  const [user,Setuser]=useState(null)
 
   return (
     <div className="App">
