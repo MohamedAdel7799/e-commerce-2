@@ -15,11 +15,7 @@ function Showproduct(){
 
     
     function addtocart(){
-      localStorage.setItem('products',JSON.stringify(productdata))
       localStorage.setItem('incart',JSON.stringify(id))
- 
-
-
     }
 
 

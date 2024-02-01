@@ -17,7 +17,9 @@ import { FaIcons } from "react-icons/fa6";
 function AllCategory(){
 
     return(
-       <div className=" container-fluid mt-5 w-75  py-3  rounded-4 bg-light ">
+         
+        <div className="  ">
+            <div className=" container-fluid mt-5 w-75  py-3  rounded-4 bg-light ">
          <div className="grid row row-cols-lg-4 row-cols-sm-2 row-cols-md-2 d-flex g-sm-3  mx-auto   rounded-5 ">
             
             <div className=" col gx-3 gy-2 ">
@@ -79,6 +81,10 @@ function AllCategory(){
           
          </div>
        </div>
+
+        </div>
+          
+       
     )
 };
 
