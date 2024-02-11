@@ -1,22 +1,18 @@
-import React, { useContext, useEffect, useState } from "react";
-import { json, useNavigate, useParams } from "react-router-dom";
+import React, { useContext, useState } from "react";
+import {  useParams } from "react-router-dom";
 import { Productcontext } from "../../App";
-import { GoStarFill } from "react-icons/go";
 import ReactStars from "react-rating-stars-component";
-import Swal from "sweetalert2";
 
 
 
 function Showproduct(){
+
     const {productdata}= useContext(Productcontext)
     const {id}=useParams()
 
-    const navigate=useNavigate()
+    const[cart,Setcart]=useState([])
 
-    
-    function addtocart(){
-      localStorage.setItem('incart',JSON.stringify(id))
-    }
+   
 
 
   
@@ -67,7 +63,11 @@ function Showproduct(){
                                 </h4>
                           </div>
                           <div className="text-center mt-5  ">
-                            <button className="btn btn-primary" onClick={addtocart} > add to cart  </button>
+                            <button className="btn btn-primary" onClick={()=>{
+                              Setcart([...cart , e ])
+                              localStorage.setItem('cart',JSON.stringify(cart))
+             
+                            }}  > add to cart  </button>
                           </div>
                         </div>                          
                        </div>           

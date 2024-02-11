@@ -1,5 +1,4 @@
-import axios from "axios";
-import React, { useContext, useEffect,  useState  } from "react";
+import React, { useContext,   useState  } from "react";
 import "./popularitems.css"
 import { CgChevronDoubleDown,CgChevronDoubleUp  } from "react-icons/cg";
 import { Link } from "react-router-dom";
@@ -13,27 +12,21 @@ import ReactStars from "react-rating-stars-component";
 function PopularItems(){
 
   const {productdata}= useContext(Productcontext)
-     
 
+     
 
     const[viewmor,Setviewmor]=useState(false)
      
      
-     let showmore =()=>{
+     const showmore =()=>{
        Setviewmor(true)     
      }
 
-     let showless=()=>{
+     const showless=()=>{
 
         Setviewmor(false)
      }
      
-
-    
-  
-    
-
-
     return(
         <div className="    ">
             <div className="container w-75 mb-5    " >
