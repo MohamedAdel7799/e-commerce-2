@@ -3,18 +3,15 @@ import React, { useEffect, useState } from "react"
 
 function Cart(){
 
-    const [cart ,Setcart]=useState([])
-
-    useEffect(
-        ()=>{
-            Setcart(JSON.parse(localStorage.getItem('cart')))
-        }
-    ,[cart])
 
 
 
- 
+    
 
+
+   
+
+    
 
    
 
@@ -25,17 +22,13 @@ function Cart(){
    
   
     return(
-         <div> 
-            {
-                cart.map((e)=>{
-                    return(
-                        <h4>{e.name}</h4>
-                    )
 
-                })
-            }
+         <div> 
+           
+        
             
-       
+            
+       <h1>hi</h1>
             
            
                

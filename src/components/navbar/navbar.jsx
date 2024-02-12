@@ -77,7 +77,8 @@ function Navbar(props){
                
 
                   <li className="nav-item">
-                    <Link className="nav-link active fw-bold " to='cart' >  {<FaCartArrowDown /> } cart </Link>
+                    {!user?(''):( <Link className="nav-link active fw-bold " to='cart' >  {<FaCartArrowDown /> } cart </Link>)}
+                   
                   </li>
 
                   <li className="nav-item">
@@ -94,7 +95,7 @@ function Navbar(props){
                           title: "Are you sure?",
                           text: "You won't logout!",
                           icon: "warning",
-                          showCancelButton: true,
+                          showCancelButton: false,
                           confirmButtonText: "Yes, logout !",
                           cancelButtonText: "No, cancel!",
                           reverseButtons: true
@@ -104,6 +105,7 @@ function Navbar(props){
                               title: "Deleted!",
                               text: "Your succssfuly loged out",
                               icon: "success",
+                              
                               
                             })
                           logout() ;
