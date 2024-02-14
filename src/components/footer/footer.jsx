@@ -7,7 +7,7 @@ function Footer(){
     return(
        
      
-        <footer className=" text-light py-3  " style={{backgroundColor:"#009090"}}>
+        <footer className=" text-light py-3 bg-info " >
           <div className="container row mx-auto ">
             <div class=" grid  d-flex justify-content-around ">
                <div class="g-col-lg-3 g-col-md-6 mb-4 mb-md-0   text-start  ">
@@ -49,7 +49,7 @@ function Footer(){
             </div>
             </div>
 
-            <div class="text-center p-3 text-dark w-100 d-flex justify-content-center mx-auto " style={{backgroundColor: "rgba(0, 0, 0, 0.05)"}}>
+            <div class="text-center p-3 text-dark w-100 d-flex justify-content-center mx-auto " >
               © 2020 Copyright:
     
             </div>

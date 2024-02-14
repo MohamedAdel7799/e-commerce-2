@@ -31,7 +31,7 @@ function Navbar(props){
       <>
       <div className=" ">  
        <nav className="navbar navbar-expand-lg p-0 shadow-sm ">
-          <div className=" container-fluid  " style={{backgroundColor:"#009090"}}>
+          <div className=" container-fluid bg-info  " >
             <div className="navbar-brand ">
              <img className="img-fluid mx-3 " style={{width:"100px"}} src={require('./kisspng-woocommerce-computer-icons-portable-network-graphi-5b6ef27e0eaf30.7504378015339976940602.png')} ></img>
 

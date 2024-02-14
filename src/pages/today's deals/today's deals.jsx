@@ -79,7 +79,7 @@ function TodaysDeals(){
                                 </div> ) 
                             })
 
-                    ):( productdata.slice(0,6).map((e)=>{
+                    ):( productdata.slice(8,14).map((e)=>{
                         return(  
                             <div className="col col-sm-5 text-center  " >
                                <div className="card h-100 py-3 d-block   rounded-4  shadow  " key={e.id}  >

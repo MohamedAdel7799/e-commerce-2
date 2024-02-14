@@ -9,10 +9,14 @@ const cartslice =createSlice({
         Addtocart: (state , action )=>{
             state.cart.push(action.payload)
 
+        },
+        Removefromcart:(state,action)=>{
+
+            state.cart = state.cart.filter(x=>x.id !== action.payload.id) 
         }
 
     }
 })
 
 export default cartslice.reducer;
-export const {Addtocart} =cartslice.actions;
+export const {Addtocart ,Removefromcart} =cartslice.actions;
