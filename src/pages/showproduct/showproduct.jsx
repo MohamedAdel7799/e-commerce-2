@@ -4,23 +4,17 @@ import { Productcontext } from "../../App";
 import ReactStars from "react-rating-stars-component";
 import { FaShare } from "react-icons/fa6";
 import { FcLike } from "react-icons/fc";
-
-
+import { UseDispatch, useDispatch } from "react-redux";
+import { Addtocart } from "../../redux/cartSlice";
 
 function Showproduct(){
+  const dispatch=useDispatch()
 
     const {productdata}= useContext(Productcontext)
     const {id}=useParams()
     const [data,Setdata] =useState([])
-    const [ cartitems,Setcartitems]=useState([])
-    const [items, Setitems]=useState([])
     
-      function Addtocart(item){
-        Setcartitems([...cartitems , item])
-        window.localStorage.setItem('cart',JSON.stringify(cartitems))
-        Setitems([cartitems])
-        window.localStorage.setItem('cartitems',JSON.stringify(items))
-      }
+     
 
 
    
@@ -68,7 +62,7 @@ function Showproduct(){
                                 </div>
                                 <div className="d-flex my-5 justify-content-start ">
                                   <div> <button className="btn btn-info px-5  " onClick={
-                                    ()=>{return(Addtocart([e]))}
+                                    ()=> dispatch(Addtocart(e))
                                   }> Add To Cart </button> </div>
                                   <div><button className="btn btn-light mx-2"> {<FcLike/>} </button></div>
                                   <div><button className="btn btn-light mx-2"> {<FaShare/>} </button></div>

@@ -2,13 +2,13 @@ import React, { useEffect, useState } from "react";
 import"./navbar.css"
 import { Link } from "react-router-dom";
 import { FaCartArrowDown ,FaRegUser ,FaMobileAlt  } from "react-icons/fa";
-
+import { UseSelector, useSelector } from "react-redux";
 import Swal from "sweetalert2";
 
 
 function Navbar(props){
 
-
+  const cartitems=useSelector(state=>state.cart.cart)
    const scroll=(e)=>{
     window.scrollTo({
       top:e.current.offsetTop,
@@ -77,7 +77,7 @@ function Navbar(props){
                
 
                   <li className="nav-item">
-                    {!user?(''):( <Link className="nav-link active fw-bold " to='cart' >  {<FaCartArrowDown /> } cart </Link>)}
+                    {!user?(''):( <Link className="nav-link active fw-bold " to='cart' > <span className="" > <i class="fa badge fa-lg fw-bolder text-dark  " value={cartitems.length}>&#xf07a;</i></span> </Link>)}
                    
                   </li>
 

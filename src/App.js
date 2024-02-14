@@ -25,27 +25,15 @@ function App() {
 
   return (
     <div className="App">
-      <Productcontext.Provider value={{productdata}}>
-      
-          <Routes>
-          
+      <Productcontext.Provider value={{productdata}}>    
+          <Routes>     
           <Route path='/' element={<MainPage/>}></Route>
           <Route path='/login' element={<Login/>} ></Route>
           <Route path='/register'element={<Register/> } ></Route>
           <Route path='/forgetpass' element={<Forgetpass/>} ></Route>
           <Route path='/:id' element={<Showproduct/>} ></Route>
           <Route path='/cart' element={<Cart/>}></Route>
-        </Routes>
-   
-
-        
-      
-         
-        
-       
-
-        
-        
+        </Routes>      
       </Productcontext.Provider>
      
     </div>
