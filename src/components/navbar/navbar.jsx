@@ -46,6 +46,11 @@ function Navbar(props){
                       scroll(props.allcategory)
                     }} aria-current="page">All Category</Link>
                   </li>
+                  <li className="nav-item">
+                    <Link className="nav-link active fw-bold" onClick={()=>{
+                      scroll(props.popularitems)
+                    }}  >Popular items</Link>
+                  </li>
 
                   <li className="nav-item">
                     <Link className="nav-link active fw-bold  " onClick={()=>{
@@ -59,11 +64,7 @@ function Navbar(props){
                     }} >Hot Offers</Link>
                   </li>
 
-                  <li className="nav-item">
-                    <Link className="nav-link active fw-bold" onClick={()=>{
-                      scroll(props.popularitems)
-                    }}  >Popular items</Link>
-                  </li>
+              
                   <li className="nav-item">
                     <Link className="nav-link active fw-bold" onClick={()=>{
                       scroll(props.footer)

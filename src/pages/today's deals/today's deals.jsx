@@ -110,8 +110,7 @@ function TodaysDeals(){
                                 value={4} /> </div>)} 
                                 </h4>
                           </div>
-                                        <button className="btn btn-info w-50 rounded-4 btn-sm "   > <Link to={`/${e.id}`} className=" text-decoration-none text-light fw-bold   "> Show product </Link> </button>
-                                        <div></div>
+                                        <button className="btn btn-info w-50 rounded-4 btn-sm  "   > <Link to={`/${e.id}`} className=" text-decoration-none text-light fw-bold   "> Show product </Link> </button>
 
                                                
                                    </div>
