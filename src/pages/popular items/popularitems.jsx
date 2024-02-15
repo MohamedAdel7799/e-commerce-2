@@ -31,7 +31,7 @@ function PopularItems(){
         <div className="    ">
             <div className="container w-75 mb-5 " >
                 <div className="d-flex justify-content-between ">
-                    <h1 className="fw-bolder"> Popular Items</h1> 
+                    <h1 className="fw-bolder title"> Popular Items</h1> 
                     { viewmor ? (<button className="btn fw-bold " onClick={showless} > view less {<CgChevronDoubleUp />} </button> )
                     :(<button className="btn fw-bold " onClick={showmore}  > view more {<CgChevronDoubleDown/>} </button> )
 
