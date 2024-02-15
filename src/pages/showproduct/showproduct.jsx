@@ -6,6 +6,7 @@ import { FaShare } from "react-icons/fa6";
 import { FcLike } from "react-icons/fc";
 import { UseDispatch, useDispatch } from "react-redux";
 import { Addtocart } from "../../redux/cartSlice";
+import Swal from "sweetalert2";
 
 function Showproduct(){
   const dispatch=useDispatch()
@@ -61,9 +62,16 @@ function Showproduct(){
                                  
                                 </div>
                                 <div className="d-flex my-5 justify-content-start ">
-                                  <div> <button className="btn btn-info px-5  " onClick={
-                                    ()=> dispatch(Addtocart(e))
-                                  }> Add To Cart </button> </div>
+                                  <div> <button className="btn btn-outline-info px-5  " onClick={
+                                    ()=> {dispatch(Addtocart(e))
+                                    Swal.fire({
+                                      position: "top-end",
+                                      icon: "success",
+                                      title: "Your Product Added To Cart ",
+                                      showConfirmButton: false,
+                                      timer: 900
+                                    });
+                                  }}> Add To Cart </button> </div>
                                   <div><button className="btn btn-light mx-2"> {<FcLike/>} </button></div>
                                   <div><button className="btn btn-light mx-2"> {<FaShare/>} </button></div>
 
